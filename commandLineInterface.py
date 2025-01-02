@@ -1,3 +1,7 @@
+# if custom command line interface is required 
+
+# may have lesser functionality/access rights compared to regular terminal
+
 import os
 import subprocess
 import readline
@@ -21,9 +25,9 @@ def query_llm(prompt):
 # Function to execute commands
 def execute_command(command):
     global command_history
+    command_history.append(command)
     try:
         # Append command to history
-        command_history.append(command)
 
         # Execute the command
         result = subprocess.run(command, shell=True, capture_output=True, text=True)

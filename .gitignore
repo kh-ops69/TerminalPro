@@ -1,1 +1,4 @@
 *.history
+myenv/*
+rndm/__pycache__/
+ideas.txt
